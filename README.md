@@ -1,2 +1,2 @@
-# MistyLeo12.github.io
-Portfolio Website
+# my-website
+Website Portfolio to show some of my accomplishments, hobbies, and what I'm working on.  
