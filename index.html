@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-palette="forest">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,6 @@
 
   <meta property="og:title" content="Gabriel Crowell — Software Engineer">
   <meta property="og:description" content="Senior software engineer building mission-driven systems across health tech, privacy, and energy.">
-  <meta property="og:image" content="https://mistyleo12.github.io/img/prof-480.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +25,6 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="photo.html">Photos</a>
         <a class="btn btn-primary" href="Gabriel_Crowell_Resume.pdf">Résumé</a>
       </div>
     </div>
@@ -53,25 +51,28 @@
         </div>
 
         <div class="hero-art">
-          <svg class="sun" viewBox="0 0 100 100" aria-hidden="true">
+          <svg class="patch" viewBox="0 0 200 200" aria-hidden="true">
             <defs>
-              <linearGradient id="sunfill" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#f0a43a"/>
-                <stop offset="0.55" stop-color="#e2703f"/>
-                <stop offset="1" stop-color="#b0452a"/>
-              </linearGradient>
+              <clipPath id="patch-clip"><circle cx="100" cy="100" r="90"/></clipPath>
               <mask id="sunbands">
-                <rect width="100" height="100" fill="#fff"/>
-                <rect y="58" width="100" height="2" fill="#000"/>
-                <rect y="66" width="100" height="3" fill="#000"/>
-                <rect y="74" width="100" height="4" fill="#000"/>
-                <rect y="82" width="100" height="5" fill="#000"/>
-                <rect y="90" width="100" height="6" fill="#000"/>
+                <rect width="200" height="200" fill="#fff"/>
+                <rect y="80" width="200" height="3" fill="#000"/>
+                <rect y="89" width="200" height="4" fill="#000"/>
+                <rect y="99" width="200" height="5" fill="#000"/>
+                <rect y="110" width="200" height="6" fill="#000"/>
               </mask>
             </defs>
-            <circle cx="56" cy="46" r="44" fill="url(#sunfill)" mask="url(#sunbands)"/>
+            <g clip-path="url(#patch-clip)">
+              <rect class="sky" width="200" height="200"/>
+              <circle class="sun" cx="100" cy="92" r="46" mask="url(#sunbands)"/>
+              <path class="ridge-back" d="M0,132 L38,96 L62,114 L102,68 L138,110 L164,88 L200,120 L200,200 L0,200Z"/>
+              <path class="ridge-front" d="M0,156 L34,134 L64,150 L98,128 L134,150 L172,132 L200,146 L200,200 L0,200Z"/>
+              <rect class="lake" y="170" width="200" height="30"/>
+              <path class="ripple" d="M62,180 h28 M112,186 h36 M44,192 h22 M120,194 h16"/>
+              <path class="pines" d="M22,172 l11,-36 l11,36z M40,172 l13,-46 l13,46z M146,172 l12,-42 l12,42z M164,172 l10,-30 l10,30z"/>
+            </g>
+            <circle class="rim" cx="100" cy="100" r="90"/>
           </svg>
-          <img class="hero-photo" src="img/prof-480.jpg" alt="Gabriel Crowell">
         </div>
       </div>
 
@@ -91,7 +92,7 @@
           <li class="job">
             <div class="job-when">Oct 2025 – Present</div>
             <div>
-              <h3>Paraglide <span>· Founder</span></h3>
+              <h3>Paraglide <span>· Co-Founder</span></h3>
               <ul>
                 <li>Founded and built a regulated health-data platform for EMS agencies, owning product, architecture, and go-to-market.</li>
                 <li>Shipped AI document intake on <strong>AWS Bedrock</strong> that turns a photo of a paper form into structured data.</li>
@@ -150,7 +151,7 @@
 
         <article class="featured postcard">
           <div>
-            <span class="status">Founder · 2025 – Present</span>
+            <span class="status">Co-Founder · 2025 – Present</span>
             <h3>Paraglide</h3>
             <p>
               Electronic patient care records for EMS crews who work where the signal doesn't.

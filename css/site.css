@@ -1,9 +1,12 @@
 /* ==========================================================================
    Theme tokens — retro outdoors / surf.
    Colors, fonts, and the paper texture all live here; swap this block to re-theme.
+   Set data-palette="forest" on <html> for the green palette (defined below).
    ========================================================================== */
 :root {
   --paper: #f3e7cf;
+  --band-text: #f3e7cf;   /* text on the dark Experience band and footer */
+  --on-accent: #1f2f37;   /* text on filled buttons and status chips */
   --surface: #fbf4e4;
   --ink: #1f2f37;
   --muted: #56646a;
@@ -41,6 +44,41 @@
     --sea-deep: #2b6d72;
     --link: #7fd0c8;
     --shadow: 5px 5px 0 #071017;
+  }
+}
+
+/* Forest palette: pine, moss, and lichen with a campfire-gold sun.
+   Token names stay the same so every component picks it up. */
+:root[data-palette="forest"] {
+  --paper: #ece6d2;
+  --band-text: #eef0dc;
+  --on-accent: #1d2a20;
+  --surface: #f7f4e8;
+  --ink: #1d2a20;
+  --muted: #55604f;
+  --line: #1d2a20;
+  --sun: #e8b04a;       /* campfire gold */
+  --coral: #a7c46a;     /* lichen: primary buttons */
+  --rust: #3f6b37;      /* moss: eyebrows, text accents */
+  --sea: #6f9a5f;       /* sage: back ridges, water */
+  --sea-deep: #23402d;  /* pine: Experience band, footer */
+  --link: #2f6034;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-palette="forest"]:not([data-theme="light"]) {
+    --paper: #121a14;
+    --surface: #1a251c;
+    --ink: #e9e8d6;
+    --muted: #a2ad99;
+    --line: #e9e8d6;
+    --sun: #f0c25e;
+    --coral: #b6d27c;
+    --rust: #a9d08a;
+    --sea: #5f8f55;
+    --sea-deep: #22402b;
+    --link: #b9dd94;
+    --shadow: 5px 5px 0 #060a07;
   }
 }
 
@@ -138,8 +176,8 @@ section { padding: 96px 0; position: relative; }
 }
 .btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); color: var(--ink); }
 .btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
-.btn-primary { background: var(--coral); color: #1f2f37; }
-.btn-primary:hover { color: #1f2f37; }
+.btn-primary { background: var(--coral); color: var(--on-accent); }
+.btn-primary:hover { color: var(--on-accent); }
 .nav .btn { padding: 0.4rem 0.95rem; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; list-style: none; padding: 0; margin: 0; }
@@ -174,24 +212,23 @@ section { padding: 96px 0; position: relative; }
   color: var(--ink);
   text-shadow: 4px 4px 0 var(--sun);
 }
-.hero .tagline { font-size: clamp(1.3rem, 2.4vw, 1.6rem); font-weight: 600; margin: 0 0 1rem; max-width: 30rem; }
+.hero .tagline { font-size: clamp(1.3rem, 2.4vw, 1.6rem); font-weight: 600; margin: 0 0 1rem; max-width: 34rem; text-wrap: balance; }
 .hero .tagline mark { background: none; color: var(--rust); }
 .hero p.lede { font-size: 1.08rem; color: var(--muted); max-width: 34rem; margin: 0 0 2rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
 .hero-art { position: relative; justify-self: center; width: min(340px, 100%); aspect-ratio: 1; }
-.hero-art .sun { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero-photo {
-  position: absolute;
-  width: 54%;
-  aspect-ratio: 1;
-  left: 4%;
-  bottom: 2%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--line);
-  box-shadow: var(--shadow);
-}
+
+/* Park-patch illustration: every fill comes from the palette tokens */
+.patch { width: 100%; height: 100%; filter: drop-shadow(5px 5px 0 var(--ink)); transform: rotate(-4deg); }
+.patch .sky { fill: var(--surface); }
+.patch .sun { fill: var(--sun); }
+.patch .ridge-back { fill: var(--sea); }
+.patch .ridge-front { fill: var(--sea-deep); }
+.patch .lake { fill: color-mix(in srgb, var(--sea) 70%, var(--surface)); }
+.patch .ripple { stroke: var(--surface); stroke-width: 2.5; stroke-linecap: round; fill: none; }
+.patch .pines { fill: var(--ink); }
+.patch .rim { fill: none; stroke: var(--ink); stroke-width: 4; }
 
 .waves { display: block; width: 100%; height: 90px; }
 .waves .w1 { fill: var(--sea); }
@@ -200,12 +237,12 @@ section { padding: 96px 0; position: relative; }
 /* ==========================================================================
    Experience — a trail log
    ========================================================================== */
-#experience { background: var(--sea-deep); color: #f3e7cf; }
-#experience h2 { color: #f3e7cf; }
+#experience { background: var(--sea-deep); color: var(--band-text); }
+#experience h2 { color: var(--band-text); }
 #experience .eyebrow { color: var(--sun); }
 #experience a { color: var(--sun); }
 
-.jobs { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 3px dashed color-mix(in srgb, #f3e7cf 45%, transparent); }
+.jobs { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 3px dashed color-mix(in srgb, var(--band-text) 45%, transparent); }
 .job { position: relative; display: grid; grid-template-columns: 170px 1fr; gap: 2rem; padding: 0 0 2.5rem; }
 .job:last-child { padding-bottom: 0; }
 .job::before {
@@ -221,13 +258,13 @@ section { padding: 96px 0; position: relative; }
   box-shadow: 0 0 0 2px var(--sun);
 }
 .job:first-child::before { background: var(--coral); box-shadow: 0 0 0 2px var(--coral); }
-.job-when { font: 500 0.85rem/1.5 var(--font-mono); color: color-mix(in srgb, #f3e7cf 70%, transparent); padding-top: 0.15rem; }
+.job-when { font: 500 0.85rem/1.5 var(--font-mono); color: color-mix(in srgb, var(--band-text) 70%, transparent); padding-top: 0.15rem; }
 .job h3 { font-size: 1.3rem; font-weight: 700; }
-.job h3 span { font-weight: 400; color: color-mix(in srgb, #f3e7cf 70%, transparent); }
-.job ul { margin: 0.75rem 0 0; padding-left: 1.1rem; color: color-mix(in srgb, #f3e7cf 82%, transparent); }
+.job h3 span { font-weight: 400; color: color-mix(in srgb, var(--band-text) 70%, transparent); }
+.job ul { margin: 0.75rem 0 0; padding-left: 1.1rem; color: color-mix(in srgb, var(--band-text) 82%, transparent); }
 .job li { margin-bottom: 0.35rem; }
 .job li::marker { color: var(--sun); }
-.job li strong { color: #fff4dc; font-weight: 700; }
+.job li strong { color: var(--band-text); font-weight: 700; }
 
 .waves.down { transform: scaleY(-1); margin-top: -1px; }
 .waves.down .w1 { fill: var(--sea-deep); }
@@ -307,7 +344,7 @@ section { padding: 96px 0; position: relative; }
   border-radius: 999px;
   border: 1.5px solid var(--line);
   background: var(--sun);
-  color: #1f2f37;
+  color: var(--on-accent);
   margin-bottom: 1rem;
 }
 .status.building { background: var(--coral); }
@@ -336,7 +373,7 @@ section { padding: 96px 0; position: relative; }
   font-family: var(--font-display);
   font-size: 1.3rem;
   line-height: 1.2;
-  color: var(--coral);
+  color: var(--rust);
 }
 .energy ol strong { display: block; }
 .energy ol span { color: var(--muted); font-size: 0.93rem; }
@@ -382,7 +419,7 @@ section { padding: 96px 0; position: relative; }
 .mountains .m1 { fill: var(--sea); }
 .mountains .m2 { fill: var(--sea-deep); }
 
-footer { background: var(--sea-deep); color: #f3e7cf; padding: 0 0 1.75rem; font-size: 0.88rem; }
+footer { background: var(--sea-deep); color: var(--band-text); padding: 0 0 1.75rem; font-size: 0.88rem; }
 footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 footer a { color: var(--sun); }
 
@@ -393,7 +430,7 @@ footer a { color: var(--sun); }
   .grid { grid-template-columns: 1fr 1fr; }
   .featured, .energy, .about .wrap { grid-template-columns: 1fr; }
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-art { width: min(280px, 80%); }
+  .hero-art { width: min(260px, 70%); }
 }
 
 @media (max-width: 640px) {
@@ -401,6 +438,7 @@ footer a { color: var(--sun); }
   .wrap { padding: 0 16px; }
   .nav-links a:not(.btn) { display: none; }
   .hero { padding-top: 48px; }
+  .hero-art { width: 170px; justify-self: start; }
   .hero .wrap { padding-bottom: 48px; }
   .job { grid-template-columns: 1fr; gap: 0.25rem; }
   .grid { grid-template-columns: 1fr; }
