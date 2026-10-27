@@ -1,245 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Gabriel | Home</title>
-
   <meta charset="utf-8">
-  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="">
-  
-  <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Poppins:400,600%7CHind:400,400i,700' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabriel Crowell — Software Engineer</title>
+  <meta name="description" content="Gabriel Crowell is a senior software engineer building mission-driven systems across health tech, privacy, and energy.">
 
-  <!-- Css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/font-icons.css" />
-  <link rel="stylesheet" href="css/sliders.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta property="og:title" content="Gabriel Crowell — Software Engineer">
+  <meta property="og:description" content="Senior software engineer building mission-driven systems across health tech, privacy, and energy.">
+  <meta property="og:image" content="https://mistyleo12.github.io/img/prof-480.jpg">
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@500&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 
-<body class="relative">
-    
-    <style> 
-        .main-wrapper{
-            background-color: ghostwhite;
-        }
-    
-    </style>
+<body>
 
-  <!-- Preloader -->
-  <div class="loader-mask">
-    <div class="loader"></div>
-  </div>
-  
-  <!-- Navigation -->
-  <header class="nav-type-1">
-    <nav class="navbar">
-      <div class="header-wrap relative">
+  <div class="stripes" aria-hidden="true"></div>
+  <nav class="nav">
+    <div class="wrap">
+      <a class="nav-name" href="#top">Gabriel Crowell</a>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="photo.html">Photos</a>
+        <a class="btn btn-primary" href="Gabriel_Crowell_Resume.pdf">Résumé</a>
+      </div>
+    </div>
+  </nav>
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+  <main id="top">
 
-          <!-- Logo -->
-          <div class="logo-container">
-            <div class="logo-wrap">
-              <a href="index.html">
-                <img width="250%" src="img/prof.png" alt="logo" border-radius: 50%>
-              </a>
-            </div>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Senior Software Engineer · Founder</p>
+          <h1>Gabriel Crowell</h1>
+          <p class="tagline">I build software for <mark>people and the planet.</mark></p>
+          <p class="lede">
+            6+ years shipping high-impact products across health tech and privacy. Duke CS + Global Health,
+            focused on how climate change affects human health — and now turning that toward energy.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn" href="https://github.com/MistyLeo12">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/gabriel--crowell">LinkedIn</a>
           </div>
-        </div> <!-- end navbar-header -->
+        </div>
 
-        <div class="nav-wrap">
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            
-            <ul class="nav navbar-nav">
+        <div class="hero-art">
+          <svg class="sun" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <linearGradient id="sunfill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f0a43a"/>
+                <stop offset="0.55" stop-color="#e2703f"/>
+                <stop offset="1" stop-color="#b0452a"/>
+              </linearGradient>
+              <mask id="sunbands">
+                <rect width="100" height="100" fill="#fff"/>
+                <rect y="58" width="100" height="2" fill="#000"/>
+                <rect y="66" width="100" height="3" fill="#000"/>
+                <rect y="74" width="100" height="4" fill="#000"/>
+                <rect y="82" width="100" height="5" fill="#000"/>
+                <rect y="90" width="100" height="6" fill="#000"/>
+              </mask>
+            </defs>
+            <circle cx="56" cy="46" r="44" fill="url(#sunfill)" mask="url(#sunbands)"/>
+          </svg>
+          <img class="hero-photo" src="img/prof-480.jpg" alt="Gabriel Crowell">
+        </div>
+      </div>
 
-              <li class="nav-item active"><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="https://github.com/MistyLeo12">Code</a></li>
-              <li><a href="photo.html">Photography</a></li>
-              <li class="nav-item"><a>Blog</a></li>
-              <li><a href="contact.html">Contact</a> </li>
-              <li>
-                <!-- Mobile social icons -->
-                <div class="social-icons on-mobile nobase dark clearfix hidden-lg hidden-md">
-                  <a href="https://www.linkedin.com/in/gabriel--crowell"><i class="ui-linkedin"></i></a>
-                  <a href="https://github.com/MistyLeo12"><i class="ui-github-circled"></i></a>  
-                  <a href="https://twitter.com/GabrielCrowe11"><i class="ui-twitter"></i></a>            
-                  
-                </div>
-              </li>
-              
+      <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path class="w1" d="M0,40 C240,10 480,70 720,40 C960,10 1200,70 1440,40 L1440,90 L0,90Z"/>
+        <path class="w2" d="M0,62 C240,38 480,86 720,62 C960,38 1200,86 1440,62 L1440,90 L0,90Z"/>
+      </svg>
+    </header>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="wrap">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've been</h2>
+
+        <ol class="jobs">
+          <li class="job">
+            <div class="job-when">Oct 2025 – Present</div>
+            <div>
+              <h3>Paraglide <span>· Founder</span></h3>
+              <ul>
+                <li>Founded and built a regulated health-data platform for EMS agencies, owning product, architecture, and go-to-market.</li>
+                <li>Shipped AI document intake on <strong>AWS Bedrock</strong> that turns a photo of a paper form into structured data.</li>
+                <li>Designed an <strong>offline-first</strong>, on-device-encrypted sync system for low-connectivity field work (HIPAA &amp; NEMSIS compliant).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-when">Jan 2022 – Sep 2026</div>
+            <div>
+              <h3>Osano <span>· Senior Software Engineer</span></h3>
+              <ul>
+                <li>Migrated the graph database from Neptune to PostgreSQL — <strong>40% lower query latency</strong> and <strong>~$150–200k/yr</strong> saved.</li>
+                <li>Refactored long-running ECS jobs to an event-driven architecture, cutting nightly runtime by <strong>~80%</strong>.</li>
+                <li>Built and owned a real-time notification service for Slack &amp; Teams, consolidating 15+ notification paths.</li>
+                <li>Architected the vendor risk assessment builder, now a core product offering.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-when">Jun 2020 – Jan 2022</div>
+            <div>
+              <h3>Human Care Systems <span>· Full-Stack Engineer</span></h3>
+              <ul>
+                <li>Built a TypeScript integration system that onboarded <strong>50,000+ patients</strong>.</li>
+                <li>Shipped 5 web apps for patient enrollment and consent; added AWS Lex sentiment analysis to a HIPAA-compliant CRM.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-when">2017 – 2018</div>
+            <div>
+              <h3>Earlier <span>· Medspoke, WISER</span></h3>
+              <ul>
+                <li>Software engineering intern at Medspoke in San Antonio — website, Python automation, data pipelines.</li>
+                <li>Taught Python at an all-girls school in Muhuru Bay, Kenya, with <a href="https://www.wisergirls.org/">WISER</a>.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <svg class="waves down" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path class="w1" d="M0,50 C240,20 480,80 720,50 C960,20 1200,80 1440,50 L1440,90 L0,90Z"/>
+    </svg>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <p class="eyebrow">Projects</p>
+        <h2>Things I've built</h2>
+
+        <article class="featured postcard">
+          <div>
+            <span class="status">Founder · 2025 – Present</span>
+            <h3>Paraglide</h3>
+            <p>
+              Electronic patient care records for EMS crews who work where the signal doesn't.
+              Snap a photo of a paper form and it's digitized; fill out a report offline and it syncs, encrypted, when you reconnect.
+            </p>
+            <ul class="tags">
+              <li>React</li><li>Node</li><li>TypeScript</li><li>Rust</li><li>AWS Bedrock</li><li>HIPAA</li><li>NEMSIS</li>
             </ul>
           </div>
-        </div> <!-- end nav-wrap -->
+          <a class="site-preview" href="https://www.paraglide-app.com/" target="_blank" rel="noopener">
+            <div class="site-bar" aria-hidden="true"><i></i><i></i><i></i><span>paraglide-app.com</span></div>
+            <img src="img/portfolio/paraglide.jpg" alt="Paraglide homepage: The Complete Platform for Event Medical Reporting" loading="lazy">
+            <div class="site-cta">Visit paraglide-app.com ↗</div>
+          </a>
+        </article>
 
-        <!-- Social icons -->
-        <div class="social-icons nobase dark clearfix hidden-sm hidden-xs">
-      	  <a href="https://www.linkedin.com/in/gabriel--crowell"><i class="ui-linkedin"></i></a>
-          <a href="https://github.com/MistyLeo12"><i class="ui-github-circled"></i></a>  
-          <a href="https://twitter.com/GabrielCrowe11"><i class="ui-twitter"></i></a>     
-        </div>
-        
-      </div> <!-- end header wrap -->
-
-
-      <!-- Nav trigger -->
-      <div id="nav-trigger">
-        <div id="nav-icon">
-          <div class="nav-icon-inner">
-            <div id="nav-icon-trigger" class="nav-icon-trigger">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+        <article class="energy postcard">
+          <div>
+            <span class="status building">In progress · Nov 2026</span>
+            <h3>Do batteries tame ERCOT's evening price spikes?</h3>
+            <p>
+              Battery storage in Texas has grown fast. Have evening price spikes gotten smaller, rarer, or shorter as a result,
+              and what does that mean for grid reliability policy? An analysis of public ERCOT, EIA, and PUCT data from 2021 to today.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>GridStatus.io</li><li>DuckDB</li><li>Plotly</li><li>GitHub Actions</li>
+            </ul>
           </div>
+          <ol>
+            <li><div><strong>Pipeline &amp; methods</strong><span>Rerunnable ERCOT, EIA, and PUCT pipeline with a reproducible README.</span></div></li>
+            <li><div><strong>Live dashboard</strong><span>Evening prices, battery output, and price spreads, refreshed daily.</span></div></li>
+            <li><div><strong>Policy memo</strong><span>Two pages for a non-technical reader: the finding, three charts, caveats.</span></div></li>
+          </ol>
+        </article>
+
+        <div class="grid">
+          <a class="card postcard" href="https://github.com/MistyLeo12/WhatsAppSpike">
+            <img src="img/portfolio/clinica.png" alt="" loading="lazy">
+            <div class="card-body">
+              <h3>Honduras Patient Notifier</h3>
+              <p>Led an agile team building scheduling and SMS reminders for a remote clinic in Roatán.</p>
+              <ul class="tags"><li>Node</li><li>MongoDB</li><li>Twilio</li><li>Docker</li></ul>
+            </div>
+          </a>
+
+          <a class="card postcard" href="https://github.com/MistyLeo12/Relation-Tree">
+            <img src="img/portfolio/tree.png" alt="" loading="lazy">
+            <div class="card-body">
+              <h3>Familial Relation Tree</h3>
+              <p>Algorithms for reconstructing and visualizing family relationship graphs.</p>
+              <ul class="tags"><li>Python</li><li>Graphs</li><li>Visualization</li></ul>
+            </div>
+          </a>
+
+          <a class="card postcard" href="https://github.com/MistyLeo12/songAnalysis-">
+            <img src="img/portfolio/song.png" alt="" loading="lazy">
+            <div class="card-body">
+              <h3>What Makes a Song Popular?</h3>
+              <p>Exploratory data analysis of the features behind hit songs.</p>
+              <ul class="tags"><li>Python</li><li>Jupyter</li><li>Tableau</li></ul>
+            </div>
+          </a>
         </div>
-      </div> <!-- end nav trigger -->
-
-    </nav> <!-- end navbar -->
-  </header>  
-
-  <main class="main-wrapper oh">
-    <!-- Grid -->
-    <section class="section-wrap pl-80 pt-0 pb-50 ">
-      <div class="container-fluid">
-
-        <div class="row">
-          <center>
-
-            <br>
-            <h3>Gabriel Crowell</h3>
-            <h1>My Projects</h1>
-            <p>Check out my <a href="https://github.com/MistyLeo12">GitHub</a> to see what I'm working on</p>
-            <p><a href="https://drive.google.com/file/d/1tj1XsY_tsmBIq5OCxQNpNmSW_YYcltOZ/">Résumé</a></p>
-            <br>
-          </center> 
-
-   
-            <div id="isotope-grid" class="works-grid with-title grid-3-col small-gutter">
-              <a href="https://github.com/MistyLeo12/Relation-Tree" class="work-item hover-trigger hover-up">
-                <div class="work-container" >
-                  <div class="work-img">
-                    <img src="img/portfolio/tree.png" alt="">
-                  </div>
-                  <div class="work-description">
-                    <h3>Familial Relational Tree Construction</h3>
-                    <span>Python Program<br> Python | Algorithm Dev. | Visualization </span>
-                  </div>                 
-                </div> 
-              </a> <!-- end work-item -->
-
-            <a href="https://github.com/MistyLeo12/WhatsAppSpike" class="work-item hover-trigger hover-up">
-              <div class="work-container">
-                <div class="work-img">
-                  <img src="img/portfolio/clinica.png" alt="" >
-                </div>
-                <div class="work-description">
-                  <h3>Honduras Patient Manager and Notifier</h3>
-                  <span>Web App<br> React.js | Node.js | MongoDB | Airtable</span>
-                </div>                 
-              </div> 
-            </a> <!-- end work-item -->
-              
-              <a href="https://github.com/MistyLeo12/DukeEats" class="work-item hover-trigger hover-up">
-                <div class="work-container">
-                <div class="work-img">
-                  <img src="img/portfolio/duke-eats.png" alt="">              
-                </div>
-                <div class="work-description">
-                  <h3>Devil Eats</h3>
-                  <span>Mobile Andriod App<br> Java | Firebase | SQLite</span>
-                </div>                
-              </div> 
-            </a> <!-- end work-item -->
-
-
-            <a href="https://github.com/MistyLeo12/songAnalysis-" class="work-item hover-trigger hover-up">
-              <div class="work-container">
-                <div class="work-img">
-                  <img src="img/portfolio/song.png" alt="">              
-                </div>
-                <div class="work-description">
-                  <h3>What Makes A Song Popular?</h3>
-                  <span>Data Science Project <br> Python | Jupyter Notebook | Tableau</span>
-                </div>                
-              </div> 
-              </a> <!-- end work-item -->
-
-
-              <a href="https://github.com/MistyLeo12/music" class="work-item hover-trigger hover-up"> 
-                <div class="work-container">
-                  <div class="work-img">
-                    <img src="img/portfolio/music.png" alt="">              
-                  </div>  
-                <div class="work-description">
-                    <h3>Coding Music</h3>
-                    <span>Music Production<br> Ruby | SonicPI | Python </span>
-                  </div>                 
-              </div> 
-              </a> <!-- end work-item -->
-
-              <a href="https://github.com/MistyLeo12/AthleteBrandConnection" class="work-item hover-trigger hover-up"> 
-                <div class="work-container">
-                  <div class="work-img">
-                    <img src="img/portfolio/athelte.png" alt="">              
-                  </div>  
-                <div class="work-description">
-                    <h3>Athlete Brand Connection Platform</h3>
-                    <span>Web App<br> React.js | Node.js | Firebase </span>
-                  </div>                 
-              </div> 
-              </a> <!-- end work-item -->
-              
-          </div>  <!-- end portfolio container -->
-            
-        </div> <!-- end row -->
-
       </div>
-    </section> <!-- end grid -->
+    </section>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="bottom-footer bg-white">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 copyright text-center">
-                <span>
-                  &copy; 2023 Gabriel Crowell | All Rights Reserved
-                </span>
-              </div>
-            </div>
-          </div>
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>A bit about me</h2>
+          <p>
+            I grew up between El Salvador and Texas, which is a big part of why I care about using software and data
+            to make a real difference for underserved communities. At Duke I studied computer science alongside global health,
+            focusing on how climate change affects food security, disease, displacement, and health systems.
+          </p>
+          <p>
+            I like the whole problem: talking to the people who'll use the thing, designing the system, and shipping
+            pragmatic code that holds up at scale. I'm looking for senior and staff roles on mission-driven teams,
+            especially in energy and climate.
+          </p>
+          <p>I speak Spanish fluently.</p>
         </div>
-      </footer> <!-- end footer -->
-      
-  </main> <!-- end main wrapper -->
 
+        <div class="about-side postcard">
+          <div class="skills">
+            <h3>Proficient</h3>
+            <ul class="tags">
+              <li>TypeScript</li><li>Node.js</li><li>Python</li><li>React</li><li>PostgreSQL</li>
+              <li>Neo4j</li><li>MongoDB</li><li>AWS</li>
+            </ul>
+          </div>
+          <div class="skills">
+            <h3>Familiar</h3>
+            <ul class="tags">
+              <li>Rust</li><li>C++</li><li>Docker</li><li>Terraform</li><li>Redis</li><li>Vue</li><li>Grafana</li>
+            </ul>
+          </div>
+          <h3>Off the clock</h3>
+          <ul class="offline">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>Swimming &amp; surfing &amp; sailing </li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M15 5h2l1.5 12M5.5 17 9 9h7l-4 8z"/></svg>Bikepacking or anything outdoors</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h14v5a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M7 3v3M11 3v3"/></svg>Good coffee at the campsite</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Making music on my saxaphone or OP-Z</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 16.8 6.4 20l1.4-6.3L3 9.4l6.4-.6z"/></svg>Stargazing &amp; <a href="photo.html">photography</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk</h2>
+        <p>Building something in energy, climate, or health? Know a great campsite or coffee roaster? I'd love to hear from you.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:gacrok@gmail.com">gacrok@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/gabriel--crowell">LinkedIn</a>
+        </div>
+      </div>
 
-	
-	
-  <!-- jQuery Scripts -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/plugins.js"></script>  
-  <script type="text/javascript" src="js/scripts.js"></script>
-    
+      <svg class="mountains" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path class="m1" d="M0,120 L0,70 L180,22 L320,80 L470,32 L640,88 L820,16 L1000,74 L1160,36 L1320,84 L1440,50 L1440,120Z"/>
+        <path class="m2" d="M0,120 L0,96 L220,56 L400,100 L600,62 L780,104 L980,66 L1180,100 L1340,72 L1440,90 L1440,120Z"/>
+      </svg>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Gabriel Crowell</span>
+      <span><a href="https://github.com/MistyLeo12">GitHub</a> · <a href="https://www.linkedin.com/in/gabriel--crowell">LinkedIn</a></span>
+    </div>
+  </footer>
+
 </body>
 </html>
